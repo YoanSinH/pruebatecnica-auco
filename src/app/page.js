@@ -30,8 +30,6 @@ export default function Home() {
       .then((response) => response.json())
       .then((data) => setAuthors(data))
       .catch((error) => console.error('Error fetching authors:', error));
-    
-    //setData(combineData);
   },[])
 
   const data = combineData()
