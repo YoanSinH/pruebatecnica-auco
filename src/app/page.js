@@ -4,21 +4,43 @@ import Card from '@/components/Card'
 
 export default function Home() {
   const [posts,setPosts] = React.useState([])
+  const [authors,setAuthors] = React.useState([])
+  //const [data,setData] = React.useState([])
 
-  const fetchPosts = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-    const data = await response.json()
-    setPosts(data)
-  }
-
+  const combineData = () => {
+    const combinedData = posts.map((post) => {
+      const author = authors.find((author) => author.id === post.userId);
+      return {
+        id: post.id,
+        title: post.title,
+        body: post.body,
+        author: author ? author.name : 'Unknown Author',
+      };
+    });
+    return combinedData;
+  };
+  
   React.useEffect(() => {
-    fetchPosts()
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((data) => setPosts(data))
+      .catch((error) => console.error('Error fetching posts:', error));
+
+    fetch('https://jsonplaceholder.typicode.com/users/')
+      .then((response) => response.json())
+      .then((data) => setAuthors(data))
+      .catch((error) => console.error('Error fetching authors:', error));
+    
+    //setData(combineData);
   },[])
 
+  const data = combineData()
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Posts</h1>
-      <Card id="11" title="Titleeeee" author="Authorrrrr" content="Contentttt"/>
+      {data.map(post => (
+        <Card key={post.id} id={post.id} title={post.title} author={post.author} content={post.body}/>
+      ))}
+      
     </main>
   )
 }
