@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {data.map(post => (
-        <Card key={post.id} id={post.id} title={post.title} author={post.author} content={post.body}/>
+        <Card key={post.id} id={post.id} title={post.title} author={post.author} content={post.body} contentPage={'/post/'+post.id}/>
       ))}
       
     </main>
