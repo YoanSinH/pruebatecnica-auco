@@ -14,10 +14,10 @@ export default function Navbar(props) {
                 <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 bg-transparent">
                         <li>
-                            <a href="#" className={"block py-2 pl-3 pr-4 bg-transparent text-gray-900 dark:text-white md:p-0 hover:text-blue-700"+(props.currentPage == 'posts'?' !text-blue-700':'')}>Posts</a>
+                            <a href="/" className={"block py-2 pl-3 pr-4 bg-transparent text-gray-900 dark:text-white md:p-0 hover:text-blue-700"+(props.currentPage == 'posts'?' !text-blue-700':'')}>Posts</a>
                         </li>
                         <li>
-                            <a href="#" className={"block py-2 pl-3 pr-4 bg-transparent text-gray-900 dark:text-white md:p-0 hover:text-blue-700"+(props.currentPage == 'dreams'?' !text-blue-700':'')}>Dreams</a>
+                            <a href="/dreams" className={"block py-2 pl-3 pr-4 bg-transparent text-gray-900 dark:text-white md:p-0 hover:text-blue-700"+(props.currentPage == 'dreams'?' !text-blue-700':'')}>Dreams</a>
                         </li>
                     </ul>
                 </div>

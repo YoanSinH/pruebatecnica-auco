@@ -2,6 +2,7 @@
 import React from 'react'
 import Card from '@/components/Card';
 import { fetchPostDetails } from '@/services/fetchPosts';
+import Navbar from '@/components/Navbar';
 
 export default function Page({ params }) {
   const [postDetails,setPostDetails] = React.useState()
@@ -39,6 +40,8 @@ export default function Page({ params }) {
   }
   
   return (
+  <>
+  <Navbar />
     <article className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>
         <h1 className="font-bold text-2xl">{post.title}</h1>
@@ -54,5 +57,6 @@ export default function Page({ params }) {
         }
   
     </article>
+  </>
   )
   }  
