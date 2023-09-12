@@ -42,20 +42,23 @@ export default function Page({ params }) {
   return (
   <>
   <Navbar />
-    <article className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
+    <article className="flex min-h-screen flex-col  justify-between p-24">
+      <div className='max-w-[80%]'>
         <h1 className="font-bold text-2xl">{post.title}</h1>
-        <p className="font-light text-lg">{postDetails.author.name}</p>
+        <p className="font-light text-lg">By: {postDetails.author.name}</p>
+        <p className="font-normal mt-3">{post.body}</p>
       </div>
-      <p className="font-normal">{post.body}</p>
-        <h2 className='font-semibold'>Comments:</h2>
+      <div className='grid h-screen mt-5'>
+        <h2 className='font-semibold text-lg'>Comments:</h2>
+        <div className='grid grid-cols-2 gap-2 w-fit'>
         {postDetails.comments.map(comment => {
           return(
           <Card key={comment.id} id={comment.id} title={comment.name} author={comment.email} content={comment.body} />
           )
         })
         }
-  
+        </div>
+      </div>
     </article>
   </>
   )
