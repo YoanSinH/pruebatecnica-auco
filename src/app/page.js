@@ -4,6 +4,7 @@ import Card from '@/components/Card'
 import {getPostsAndAuthors} from '@/services/fetchPosts'
 import Navbar from '@/components/Navbar'
 import CardSkeleton from '@/components/CardSkeleton'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   const [data,setData] = React.useState([])
@@ -35,6 +36,7 @@ export default function Home() {
       ))}
       </div>
     </main>
+    <Footer/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js" async></script>
     </>
   )
