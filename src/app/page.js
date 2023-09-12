@@ -3,6 +3,7 @@ import React from 'react'
 import Card from '@/components/Card'
 import {getPostsAndAuthors} from '@/services/fetchPosts'
 import Navbar from '@/components/Navbar'
+import CardSkeleton from '@/components/CardSkeleton'
 
 export default function Home() {
   const [data,setData] = React.useState([])
@@ -13,6 +14,7 @@ export default function Home() {
     .catch((error) => console.error('Error:', error));
   },[])
 
+  console.log(data)
   return (
     <>
       <Navbar currentPage="posts"/>
@@ -20,7 +22,17 @@ export default function Home() {
       <h1 className='font-bold text-3xl'></h1>
       <h2 className="font-semibold text-3xl mb-4">Posts 📝</h2>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
-      {data.map(post => (
+      {data.length === 0 ?
+      <>
+      <CardSkeleton/>
+      <CardSkeleton/>
+      <CardSkeleton/>
+      <CardSkeleton/>
+      <CardSkeleton/>
+      <CardSkeleton/>
+      </>
+        :
+      data.map(post => (
         <Card key={post.id} id={post.id} title={post.title} author={post.author} content={post.body} contentPage={'/post/'+post.id}/>
       ))}
       </div>
