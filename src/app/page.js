@@ -14,7 +14,6 @@ export default function Home() {
     .catch((error) => console.error('Error:', error));
   },[])
 
-  console.log(data)
   return (
     <>
       <Navbar currentPage="posts"/>
