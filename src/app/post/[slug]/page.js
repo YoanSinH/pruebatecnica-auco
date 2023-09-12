@@ -27,7 +27,15 @@ export default function Page({ params }) {
   },[])
 
   if (!postDetails) {
-    return <div>Loading...</div>
+    return (
+      <>
+      <div className="flex min-h-screen items-center justify-center space-x-2">
+        <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
+        <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
+        <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
+      </div>
+      </>
+    )
   }
   
   return (
