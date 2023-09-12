@@ -30,11 +30,14 @@ export default function Page({ params }) {
   if (!postDetails) {
     return (
       <>
+      <Navbar/>
+      <main>
       <div className="flex min-h-screen items-center justify-center space-x-2">
         <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
         <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
         <div className="w-4 h-4 rounded-full animate-pulse dark:bg-blue-400"></div>
       </div>
+      </main>
       </>
     )
   }
@@ -42,6 +45,7 @@ export default function Page({ params }) {
   return (
   <>
   <Navbar />
+  <main>
     <article className="flex min-h-screen flex-col justify-between mt-10 md:px-24 px-5">
       <div className='max-w-[80%]'>
         <h1 className="font-bold text-2xl">{post.title}</h1>
@@ -60,6 +64,7 @@ export default function Page({ params }) {
         </div>
       </div>
     </article>
+  </main>
   </>
   )
   }  
