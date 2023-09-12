@@ -49,7 +49,7 @@ export default function Home() {
         <Card key={post.id} id={post.id} title={post.title} author={post.author} content={post.body} contentPage={'/post/'+post.id}/>
       ))}
       </div>
-      {data.length === 0 ?
+      {data.length === 0 || currentData.length >= data.length ?
       null :
       <>
       <div className='mt-5 flex items-center justify-center'>
