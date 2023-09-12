@@ -15,8 +15,8 @@ export default function Home() {
 
   return (
     <>
-      <Navbar/>
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Navbar currentPage="posts"/>
+    <main className="flex min-h-screen flex-col pt-10 px-24">
       <h1 className='font-bold text-3xl'></h1>
       <h2 className="font-semibold text-3xl mb-4">Posts 📝</h2>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
