@@ -45,8 +45,8 @@ export default function Page({ params }) {
   return (
   <>
   <Navbar />
-  <main>
-    <article className="flex min-h-screen flex-col justify-between mt-10 md:px-24 px-5">
+  <main className="flex min-h-screen flex-col mt-10 md:px-24 px-5 mb-10">
+    <article className="flex min-h-screen flex-col justify-between mt-10 md:px-24 px-5 mb-10">
       <div className='max-w-[80%]'>
         <h1 className="font-bold text-2xl">{post.title}</h1>
         <p className="font-light text-lg">By: {postDetails.author.name}</p>
