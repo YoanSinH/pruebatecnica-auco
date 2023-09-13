@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AucoPost
+Está es una prueba tecnica para Auco.ai, el objetivo es evaluar la calidad del código, la organización de los componentes, la capacidad para trabajar con datos dinámicos y la implementación de las funcionalidades requeridas.
 
-## Getting Started
+--- 
+### Prerrequisitos
+Antes de comenzar, asegúrate de tener instalados los siguientes prerrequisitos en tu sistema:
 
-First, run the development server:
+- Node.js (versión 18 o superior)
+- Npm (o package manager preferido para node)
+- Git
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Clonar el Repositorio
+Primero, clona el repositorio de la aplicación desde GitHub a tu computadora local. Abre tu terminal y ejecuta el siguiente comando:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    git clone https://github.com/YoanSinH/pruebatecnica-auco.git
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Instalar Dependencias
+Una vez que hayas clonado el repositorio, navega al directorio de la aplicación, instala las dependencias de la aplicación utilizando npm (o tu package manager preferido para node si lo prefieres):
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    npm install
 
-## Learn More
+### Iniciar la Aplicación
+Una vez que todas las dependencias se hayan instalado, puedes iniciar la aplicación. Utiliza el siguiente comando:
 
-To learn more about Next.js, take a look at the following resources:
+    npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este comando iniciará el servidor de desarrollo de Next.js y la aplicación estará disponible en `http://localhost:3000` (o en el puerto que se le asigne) . Abre tu navegador y navega a esa URL para ver la aplicación en funcionamiento.
