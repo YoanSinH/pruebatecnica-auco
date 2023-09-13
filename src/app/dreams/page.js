@@ -7,7 +7,7 @@ export default async function Page(){
         <Navbar currentPage="dreams"/>
         <main className="flex min-h-screen flex-col mt-10 md:px-24 px-5">
             <article>
-                <h1 className="font-bold text-3xl mb-4">Mis sueños en Auco</h1>
+                <h1 className="font-bold text-3xl mb-4">Mis sueños en Auco ✨</h1>
                 <p>Me gustaría dedicar esta página a compartir mis sueños y proyecciones en el contexto de nuestra empresa. Aquí están mis aspiraciones y metas profesionales, así como mi visión de cómo puedo aportar al éxito continuo de Auco.</p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3">

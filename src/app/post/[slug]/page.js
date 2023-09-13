@@ -63,6 +63,7 @@ export default function Page({ params }) {
         }
         </div>
       </div>
+      <div className='mt-10 mb-10'/>
     </article>
   </main>
   </>
